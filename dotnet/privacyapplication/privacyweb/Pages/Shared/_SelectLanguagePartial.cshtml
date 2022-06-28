@@ -1,0 +1,17 @@
+﻿
+@{
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    var returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}{Context.Request.QueryString}";
+    var culture = "sv";
+    var displayName = "Svenska";
+}
+
+@if (requestCulture.RequestCulture.UICulture.Name == "sv")
+{
+    culture = "en";
+    displayName = "English";
+}
+
+<form method="post" asp-controller="Home" asp-action="SetLanguage" asp-route-culture="@culture" asp-route-returnUrl="@returnUrl">
+    <button type="submit" class="lang-button" lang="@culture">@displayName</button>
+</form>

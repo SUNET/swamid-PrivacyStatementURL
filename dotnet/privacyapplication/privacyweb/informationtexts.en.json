@@ -1,0 +1,18 @@
+{
+  "infolist": [
+    {
+      "entityids": [
+        "https://client200-180.its.umu.se/shibboleth"
+      ],
+      "lang": "en",
+      "information": {
+        "system": "Account administration",
+        "title": "System for handling user accounts",
+        "text": [
+          "lorem",
+          "ipsum"
+        ]
+      }
+    }
+  ]
+}

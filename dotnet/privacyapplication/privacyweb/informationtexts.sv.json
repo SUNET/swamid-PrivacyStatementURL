@@ -1,0 +1,18 @@
+{
+  "infolist": [
+    {
+      "entityids": [
+        "https://client200-180.its.umu.se/shibboleth"
+      ],
+      "lang": "sv",
+      "system": "Kontohantering",
+      "information": {
+        "title": "System för kontohantering vid Umeå universitet",
+        "text": [
+          "lorem",
+          "ipsum"
+        ]
+      }
+    }
+  ]
+}

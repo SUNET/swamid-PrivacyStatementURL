@@ -1,0 +1,99 @@
+{
+  "privacylist": [
+    {
+      "entityId": [ "default" ],
+      "lang": "en",
+      "title": "Transfer of personal data to #SYSTEM when using federated login",
+      "sections": [
+        {
+          "id": "description",
+          "title": "Description of #SYSTEM",
+          "text": [ "The system handles activation of user accounts at Umea University" ]
+        },
+        {
+          "id": "personaldata",
+          "title": "Processing of personal data",
+          "subsections": [
+            {
+              "id": "transferpersonaldata",
+              "title": "Transfer of personal data",
+              "text": [
+                "When logging in, personal data is transferred from the identity issuer you have logged in with to the account administration system in order to activate accounts and set the correct level of trust",
+                "The following personal information is requested by the login service:"
+              ],
+              "attributes": {
+                "headers": [
+                  "Personal data",
+                  "Purpose",
+                  "Technical representation"
+                ],
+                "properties": [
+                  {
+                    "attribute": "Personal identity number",
+                    "purpose": "To verify the identification of you",
+                    "technicalrepresentation": "norEduPersonNIN"
+                  },
+                  {
+                    "attribute": "Assurance level",
+                    "purpose": "Check level of trust from login provider",
+                    "technicalrepresentation": "eduPersonAssurance"
+                  }
+                ],
+                "footer": "In addition to direct personal data, technically indirect personal data is also transferred, such as which organization you belong to and which identity issuer has been used when logging in. This information is not used by the login service more than for technical logs."
+              }
+            },
+            {
+              "id": "processpersonaldata",
+              "title": "Other processing of personal data in the service",
+              "text": [
+                "The login service saves technical logs for troubleshooting and security-related incidents. These technical logs contain information about all logins that are made incl. transferred personal data."
+              ]
+            },
+            {
+              "id": "transferpersonaldatathirdparty",
+              "title": "Transfer of personal data to third parties",
+              "text": [
+                "No personal data is transferred to third parties."
+              ]
+            },
+            {
+              "id": "personaldatalawfulbasis",
+              "title": "Lawful basis",
+              "text": [
+                "Personal data is handled based on the legal basis of public interest. The personal data must be transferred in order to enable users to establish their account at Umea University"
+              ]
+            },
+            {
+              "id": "personaldataaccess",
+              "title": "Right of access, right of rectification and right of erasure of personal data",
+              "text": [
+                "For access, rectification and deletion of your personal data, contact the personal data controller at the higher education institution where the data is registered.",
+                "Correction of personal data transferred from your identity provider during login is done at your identity provider."
+              ]
+            },
+            {
+              "id": "personaldatacontroller",
+              "title": "Personal data controller",
+              "text": [
+                "Person data controller for the processing of personal data is Umea University, Sweden. If you have questions about how personal data is handled within the service, please contact <a href=\"mailto:pulo@umu.se\">pulo@umu.se</a>",
+                "Contact information for Umeå University's data protection officer is available at <a href=\"https://www.aurora.umu.se/regler-och-riktlinjer/juridik/personuppgifter\" target=\"_blank\">https://www.aurora.umu.se/regler-och-riktlinjer/juridik/personuppgifter/</a>"
+              ]
+            },
+            {
+
+              "title": "GÉANT Data Protection Code of Conduct",
+              "text": [
+                "This service complies with the international framework GÉANT Data Protection Code of Conduct (<a href=\"http://www.geant.net/uri/dataprotection-code-of-conduct/v1\" target=\"_blank\">http://www.geant.net/uri/dataprotection-code-of-conduct/v1</a>) for the transfer of personal data from identity providers to the service. This framework is intended for services in Sweden, the EU and the EEA that are used in research and higher education."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entityId": [ "https://client200-180.its.umu.se/shibboleth" ],
+      "lang": "en",
+      "title": "Special! Transfer of personal data to #SYSTEM when using federated login"
+    }
+  ]
+}

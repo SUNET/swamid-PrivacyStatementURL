@@ -1,0 +1,100 @@
+{
+  "privacylist": [
+    {
+      "entityId": [ "default" ],
+      "lang": "sv",
+      "title": "Överföring av personuppgifter till #SYSTEM i samband med federerad inloggning",
+      "sections": [
+        {
+          "id": "description",
+          "title": "Beskrivning av #SYSTEM",
+          "text": [ "Systemet hanterar aktivering av användarkonton vid Umeå universitet" ]
+        },
+        {
+          "id": "personaldata",
+          "title": "Hantering av personuppgifter",
+          "subsections": [
+            {
+              "id": "transferpersonaldata",
+              "title": "Överföring av personuppgifter",
+              "text": [
+                "Vid inloggning överförs personuppgifter från den identitetsutfärdare du har loggat in med till kontoadministrationssystemet för att kunna aktivera konton samt sätta rätt tillitsnivå",
+                "Följande personuppgifter begärs av inloggningstjänsten:"
+              ],
+              "attributes": {
+                "headers": [
+                  "Personuppgifter",
+                  "Syfte",
+                  "Teknisk representation"
+                ],
+                "properties": [
+                  {
+                    "attribute": "Personnummer",
+                    "purpose": "Identifiering av användaren",
+                    "technicalrepresentation": "norEduPersonNin"
+                  },
+                  {
+                    "attribute": "Tillitsnivå",
+                    "purpose": "Kontroll av tillitsnivå från inloggningstjänst",
+                    "technicalrepresentation": "eduPersonAssurance"
+                  }
+                ],
+                "footer": "Förutom direkta personuppgifter överförs även tekniskt indirekta personuppgifter såsom vilken organisation du tillhör och vilken identitetsutfärdare som har använts vid inloggningen. Dessa uppgifter används ej av inloggningstjänsten mer än för tekniska loggar."
+              }
+            },
+            {
+              "id": "processpersonaldata",
+              "title": "Övrig behandling av personuppgifter i tjänsten",
+              "text": [
+                "Inloggningstjänsten sparar tekniska loggar för felsökning och säkerhetsrelaterade incidenter. Dessa tekniska loggar innehåller information om alla inloggningar som görs inkl. överförda personuppgifter."
+              ]
+            },
+            {
+              "id": "transferpersonaldatathirdparty",
+              "title": "Överföring av personuppgifter till tredje part",
+              "text": [
+                "Inga personuppgifter överförs till tredje part."
+              ]
+            },
+            {
+              "id": "personaldatalawfulbasis",
+              "title": "Rättslig grund",
+              "text": [
+                "Personuppgifter hanteras baserat på den rättsliga grunden allmänt intresse. Personuppgifterna måste överföras för att ge användare ska kunna etablera sitt konto vid Umeå universitet"
+              ]
+            },
+            {
+              "id": "personaldataaccess",
+              "title": "Rätt till registerutdrag, rättelse och radering av personuppgifter",
+              "text": [
+                "Inga personuppgifter sparas i tjänsten förutom i tekniska loggar för felsökning och säkerhetsrelaterade incidenter.",
+                "För registerutdrag och radering av dina personuppgifter, kontakta personuppgiftsansvarig."
+              ]
+            },
+            {
+              "id": "personaldatacontroller",
+              "title": "Personuppgiftsansvarig",
+              "text": [
+                "Personuppgiftsansvarig för behandlingen av personuppgifter är Umeå universitet, Sverige. Har du frågor om hur personuppgifter hanteras inom tjänsten tag kontakt med <a href=\"mailto:pulo@umu.se\">pulo@umu.se</a>",
+                "Kontaktuppgifter till Umeå universitets dataskyddsombud finns på <a href=\"https://www.aurora.umu.se/regler-och-riktlinjer/juridik/personuppgifter\" target=\"_blank\">https://www.aurora.umu.se/regler-och-riktlinjer/juridik/personuppgifter/</a>"
+              ]
+            },
+            {
+              "id": "personaldatacoco",
+              "title": "GÉANT Data Protection Code of Conduct",
+              "text": [
+                "Denna tjänst följer det internationella ramverket GÉANT Data Protection Code of Conduct (<a href=\"http://www.geant.net/uri/dataprotection-code-of-conduct/v1\" target=\"_blank\">http://www.geant.net/uri/dataprotection-code-of-conduct/v1</a>) för överföring av personuppgifter från identitetsutfärdare till tjänsten. Ramverket är avsett för tjänster i Sverige, EU och EES som används inom forskning och högre utbildning."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entityId": [ "https://client200-180.its.umu.se/shibboleth" ],
+      "lang": "sv",
+      "title": "Special! Överföring av personuppgifter till #SYSTEM i samband med federerad inloggning"
+    }
+  ]
+}
+
