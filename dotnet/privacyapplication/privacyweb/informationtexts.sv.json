@@ -9,8 +9,78 @@
       "information": {
         "title": "System för kontohantering vid Umeå universitet",
         "text": [
-          "lorem",
-          "ipsum"
+          "Utvecklingsmaskin som används för bl.a. tester av kontohantering"
+        ]
+      }
+    },
+    {
+      "entityids": [
+        "https://administrationsverktyg.umu.se/shibboleth"
+      ],
+      "lang": "sv",
+      "information": {
+        "system": "Konto administration",
+        "title": "System for hantering av användarkonton",
+        "text": [
+          "Konto administrationstjänsten vid Umeå universitet riktar sig mot anställda och studenter",
+          "Tjänsten är avsedd för aktivering och förnyelse av användarkonton för inloggning via antagning.se, eduID.se, Freja eID+ eller med engångskod."
+        ]
+      }
+    },
+    {
+      "entityids": [
+        "https://jira-dev.its.umu.se/shibboleth"
+      ],
+      "lang": "sv",
+      "information": {
+        "system": "Jira",
+        "title": "System för ärendehantering, utvecklarstöd och agil projektledning",
+        "text": [
+          "Jira är ett ärendehanteringssystem som används i samband med mjukvaruutvecklingsprojekt som bedrivs av ITS, IT-stöd och systemutveckling vid Umeå Universitet.",
+          "Tjänsten används av personal i ITS utvecklingsprojekt och är avsedd för ärendehantering, felrapportering i samband med mjukvaruutveckling och agil projektledning. Den federerade inloggningen hanterar inloggning av instanser till Jira som används och driftas av ITS hos Umeå Universitet."
+        ]
+      }
+    },
+    {
+      "entityids": [
+        "https://tentaadmin.test.umu.se/shibboleth",
+        "https://tentaadmin-demo.test.umu.se/shibboleth",
+        "https://tentaadmin.uhr.se/shibboleth"
+      ],
+      "lang": "sv",
+      "information": {
+        "system": "TentaAdmin",
+        "title": "System för administration av tentamen och prov",
+        "text": [
+          "TentaAdmin är ett system för administration av tentander, vakter och lokaler i samband med tentamen eller andra prov.",
+          "Systemägare är UHR, Universitets och Högskolerådet. Utveckling och underhåll samt drift av testmiljö sköts av ITS, IT-stöd och systemutveckling vid Umeå Universitet.",
+          "Tjänsten används av personal på lärosäten i Sverige."
+        ]
+      }
+    },
+    {
+      "entityids": [
+        "https://www.wisum.its.umu.se/shibboleth"
+      ],
+      "lang": "sv",
+      "information": {
+        "system": "WISUM",
+        "title": "Inköpssystem",
+        "text": [
+          "Webbaserat inköpssystem för högre utbildning"
+        ]
+      }
+    },
+    {
+      "entityids": [
+        "https://play.umu.se"
+      ],
+      "lang": "sv",
+      "information": {
+        "system": "UmUPlay (Kaltura)",
+        "title": "Online videoplattform",
+        "text": [
+          "Denna tjänst används för presentationer av video från Umeå universitet"
         ]
       }
     }

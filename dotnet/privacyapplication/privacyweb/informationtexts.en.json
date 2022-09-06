@@ -9,8 +9,78 @@
         "system": "Account administration",
         "title": "System for handling user accounts",
         "text": [
-          "lorem",
-          "ipsum"
+          "Developer machine for testing account administration"
+        ]
+      }
+    },
+    {
+      "entityids": [
+        "https://administrationsverktyg.umu.se/shibboleth"
+      ],
+      "lang": "en",
+      "information": {
+        "system": "Account administration",
+        "title": "Service for handling user accounts",
+        "text": [
+          "Account administration service at Umea University is a service directed towards staff and students.",
+          "The service is intended for activation and renewal of user accounts of login via antagning.se, eduID.se, Freja eID+ or with a one-time passcode."
+        ]
+      }
+    },
+    {
+      "entityids": [
+        "https://jira-dev.its.umu.se/shibboleth"
+      ],
+      "lang": "en",
+      "information": {
+        "system": "Jira",
+        "title": "System for issue tracking, software development support and agile project management",
+        "text": [
+          "Jira is an issue tracking system used in software development projects at ITS, ICT Services and System Develoment at Umea University.",
+          "The service is aimed at personnel working with software development projects at ITS and is intended for issue tracking, defect reporting in software development and agile project management. The federated login handles login to instances of Jira used by ITS at Umea University."
+        ]
+      }
+    },
+    {
+      "entityids": [
+        "https://tentaadmin.test.umu.se/shibboleth",
+        "https://tentaadmin-demo.test.umu.se/shibboleth",
+        "https://tentaadmin.uhr.se/shibboleth"
+      ],
+      "lang": "en",
+      "information": {
+        "system": "TentaAdmin",
+        "title": "System for administration of exams and tests",
+        "text": [
+          "TentaAdmin is a system for administration of students, proctors and exam rooms for exams or other tests.",
+          "System owner is UHR, Swedish council for higher education. Development and test environment is handled by ITS, IT-support and system development at Umeå Universitet.",
+          "The service is used by personel at universitys and collages in Sweden."
+        ]
+      }
+    },
+    {
+      "entityids": [
+        "https://www.wisum.its.umu.se/shibboleth"
+      ],
+      "lang": "en",
+      "information": {
+        "system": "WISUM",
+        "title": "web-based purchasing system",
+        "text": [
+          "Web-based purchasing system för higher education"
+        ]
+      }
+    },
+    {
+      "entityids": [
+        "https://play.umu.se"
+      ],
+      "lang": "en",
+      "information": {
+        "system": "UmUPlay (Kaltura)",
+        "title": "Online Video platform",
+        "text": [
+          "Service is for presentation of videos from Umea University"
         ]
       }
     }

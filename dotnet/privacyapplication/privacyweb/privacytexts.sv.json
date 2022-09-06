@@ -91,9 +91,16 @@
       ]
     },
     {
-      "entityId": [ "https://client200-180.its.umu.se/shibboleth" ],
+      "entityId": [ "https://jira-dev.its.umu.se/shibboleth" ],
       "lang": "sv",
-      "title": "Special! Överföring av personuppgifter till #SYSTEM i samband med federerad inloggning"
+      "title": "Överföring av personuppgifter till #SYSTEM vid användning av den federerade inloggningen",
+      "sections": [
+        {
+          "id": "description",
+          "title": "Beskrivning av #SYSTEM",
+          "text": [ "Jira används för ärendehantering, felrapportering och agil projektledning vid Umeå Universitet. Den federerade inloggningen hanterar inloggning till instanser av Jira som används av ITS hos Umeå Universitet." ]
+        }
+      ]
     }
   ]
 }

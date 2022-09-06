@@ -13,6 +13,8 @@ namespace privacyweb.Settings
         public List<string> SupportedCultures { get; set; }
         public List<string> CultureFiles { get; set; }
         public List<Infolist> Informations { get; set; }
+        public string InfoHeader_sv { get; set; }
+        public string InfoHeader_en { get; set; }
     }
     public class Info
     {

@@ -9,6 +9,14 @@
         }
         public List<string> Attributes { get; set; }
         public List<SystemName> SystemNames { get; set; }
+        //TODO 
+        public void AddAttribute(string attribute)
+        {
+            if (!Attributes.Contains(attribute))
+            {
+                Attributes.Add(attribute);  
+            }
+        }
     }
     public class SystemName
     {

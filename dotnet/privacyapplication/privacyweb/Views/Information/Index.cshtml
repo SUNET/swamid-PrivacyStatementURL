@@ -11,7 +11,7 @@
     <div class="float-right">
             @foreach (var n in Model.Navigations)
             {
-                <a href="@Url.Action("Index","Home",new {system=Model.System,lang=n.Culture})">
+                <a href="@Url.Action("Index","Information",new {system=Model.System,lang=n.Culture})">
                 <img src="@n.CultureLogo" />@Html.Raw(n.CultureText)</a>
             }
         </div>

@@ -91,9 +91,16 @@
       ]
     },
     {
-      "entityId": [ "https://client200-180.its.umu.se/shibboleth" ],
+      "entityId": [ "https://jira-dev.its.umu.se/shibboleth" ],
       "lang": "en",
-      "title": "Special! Transfer of personal data to #SYSTEM when using federated login"
+      "title": "Transfer of personal data to #SYSTEM when using federated login",
+      "sections": [
+        {
+          "id": "description",
+          "title": "Description of #SYSTEM",
+          "text": [ "Jira is used for issue tracking, defect reporting and agile project management at Umea University. The federated login handles login to instances of Jira used by ITS at Umea University." ]
+        }
+      ]
     }
   ]
 }

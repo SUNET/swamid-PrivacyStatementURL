@@ -1,6 +1,7 @@
 ﻿using privacyweb.Interface;
 using privacyweb.Model;
 using System.Net;
+using System.Web;
 using System.Xml;
 
 namespace privacyweb.Service
@@ -23,12 +24,10 @@ namespace privacyweb.Service
                     var xml = client.DownloadString(entityId);
                     XmlDocument doc = new XmlDocument();
                     doc.LoadXml(xml);
-                    //var nsmgr = new XmlNamespaceManager(doc.NameTable);
-                    //nsmgr.AddNamespace("md", "urn:oasis:names:tc:SAML:2.0:metadata");
-                    //nsmgr.AddNamespace("ds", "http://www.w3.org/2000/09/xmldsig#");
-                    //nsmgr.AddNamespace("mdattr", "urn:oasis:names:tc:SAML:metadata:attribute");
-                    //nsmgr.AddNamespace("mdrpi", "urn:oasis:names:tc:SAML:metadata:rpi");
-                    //nsmgr.AddNamespace("mdui", "urn:oasis:names:tc:SAML:metadata:ui");
+                    var nsmgr = new XmlNamespaceManager(doc.NameTable);
+                    nsmgr.AddNamespace("samla", "urn:oasis:names:tc:SAML:2.0:assertion");
+                    nsmgr.AddNamespace("mdattr", "urn:oasis:names:tc:SAML:metadata:attribute");
+                    nsmgr.AddNamespace("mdui", "urn:oasis:names:tc:SAML:metadata:ui");
                     //nsmgr.AddNamespace("pyff", "http://pyff.io/NS");
                     //nsmgr.AddNamespace("saml", "urn:oasis:names:tc:SAML:2.0:assertion");
                     //nsmgr.AddNamespace("shibmd", "urn:mace:shibboleth:metadata:1.0");
@@ -36,8 +35,36 @@ namespace privacyweb.Service
                     //nsmgr.AddNamespace("xs", "http://www.w3.org/2001/XMLSchema");
                     //nsmgr.AddNamespace("xsi", "http://www.w3.org/2001/XMLSchema-instance");
                     //nsmgr.AddNamespace("xsl", "http://www.w3.org/1999/XSL/Transform");
-                    //XmlElement xmlElem = doc.DocumentElement;
-                    //XmlNodeList nodeList = xmlElem.SelectNodes(".//md:RequestedAttribute");
+
+                    //Entity Categories
+                    var cats = doc.SelectNodes(@"//mdattr:EntityAttributes/samla:Attribute[@Name='http://macedir.org/entity-category']/samla:AttributeValue",nsmgr);
+                    foreach (XmlNode cat in cats)
+                    {
+                        switch (cat.InnerText.ToLower())
+                        {
+                            case "http://refeds.org/category/research-and-scholarship":
+                                ret.AddAttribute("eduPersonTargetedID");
+                                ret.AddAttribute("eduPersonPrincipalName");
+                                ret.AddAttribute("mail");
+                                ret.AddAttribute("givenName");
+                                ret.AddAttribute("sn");
+                                ret.AddAttribute("eduPersonAssurance");
+                                ret.AddAttribute("eduPersonScopedAffiliation");
+                                break;
+                            case "https://refeds.org/category/personalized":
+                                ret.AddAttribute("subject-id");
+                                ret.AddAttribute("mail");
+                                ret.AddAttribute("displayName");
+                                ret.AddAttribute("givenName");
+                                ret.AddAttribute("sn");
+                                ret.AddAttribute("eduPersonAssurance");
+                                ret.AddAttribute("eduPersonScopedAffiliation");
+                                ret.AddAttribute("schacHomeOrganization");
+                                break;
+                            default:
+                                break;
+                        }
+                    }
 
                     //Attributes
                     var nodes = doc.GetElementsByTagName("md:RequestedAttribute");
@@ -45,16 +72,34 @@ namespace privacyweb.Service
                     {
                         ret.Attributes.Add(node.Attributes.GetNamedItem("FriendlyName").Value);
                     }
+
                     //Names
                     nodes = doc.GetElementsByTagName("md:ServiceName");
-                    foreach (XmlNode node in nodes)
+                    if(nodes.Count > 0)
+                    {
+                        foreach (XmlNode node in nodes)
+                        {
+                            ret.SystemNames.Add(new SystemName()
+                            {
+                                Name = node.InnerText,
+                                Lang = node.Attributes.GetNamedItem("xml:lang").Value
+                            });
+                        }
+                    }
+                    else
                     {
                         ret.SystemNames.Add(new SystemName()
                         {
-                            Name = node.InnerText,
-                            Lang = node.Attributes.GetNamedItem("xml:lang").Value
+                            Name =  HttpUtility.UrlDecode( entityId),
+                            Lang="en"
+                        });
+                        ret.SystemNames.Add(new SystemName()
+                        {
+                            Name = entityId,
+                            Lang = "sv"
                         });
                     }
+                    
                 }catch (Exception ex)
                 {
                     ret = null;

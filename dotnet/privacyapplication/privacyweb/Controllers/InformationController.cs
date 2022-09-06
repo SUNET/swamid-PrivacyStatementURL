@@ -43,7 +43,16 @@ namespace privacyweb.Controllers
 
                 if (info != null && mdqModel!=null) {
                     model.System = (from s in mdqModel.SystemNames.Where(l => l.Lang == _culture) select s.Name).SingleOrDefault();
-                    model.SystemName =_localizer.GetString("InformationTitle") + " " + model.System;
+                    if (_culture == "sv")
+                    {
+                        model.SystemName = _informationSettings.InfoHeader_sv + " " + model.System;
+                    }
+                    else
+                    {
+                        model.SystemName = _informationSettings.InfoHeader_en + " " + model.System;
+                    }
+                    //model.SystemName =_localizer.GetString("InformationTitle") + " " + model.System;
+                    model.System=query.system;
                     model.information = info.information;
                     return View(model);
                 }
