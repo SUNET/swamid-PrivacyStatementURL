@@ -19,5 +19,7 @@ namespace privacyweb.Settings
         public List<PrivacyModel> PrivacyContent { get; set; }
         public string SystemName_sv { get; set; }
         public string SystemName_en { get; set; }
+        public string EmptyAttributes_sv { get; set; }
+        public string EmptyAttributes_en { get; set; }
     }
 }

@@ -91,6 +91,14 @@ namespace privacyweb.Controllers
             {
                 pm.privacylist[0].sections[1].subsections[0].attributes.properties.Add(GetAttribute(a, systemName));
             }
+
+            if (m.Attributes.Count == 0)
+            {
+                pm.privacylist[0].sections[1].subsections[0].attributes = null;
+                //sätt defaulttext i sidan
+                pm.EmptyAttributesText = _culture == "sv" ? _privacySettings.EmptyAttributes_sv : _privacySettings.EmptyAttributes_en;
+                var foo = "";
+            }
         }
 
         private void SetTitle(PrivacyModel pm, string systemName)

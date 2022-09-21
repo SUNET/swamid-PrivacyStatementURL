@@ -57,9 +57,13 @@
                                     </tr>
                                 }
                             </tbody>
-                        </table>
-                    }
+                    </table>
                 }
+                else
+                {
+                    <p><b>@Html.Raw(Model.EmptyAttributesText)</b></p>
+                }
+            }
             }
         }  
 </div>

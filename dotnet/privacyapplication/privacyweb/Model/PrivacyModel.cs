@@ -8,6 +8,7 @@ namespace privacyweb.Model
         public List<Privacylist> privacylist { get; set; }
         public List<Navigation> Navigations { get; set; }
         public string System { get; set; }
+        public string EmptyAttributesText { get; set; }
         public PrivacyModel()
         {
             privacylist = new List<Privacylist>(3);
