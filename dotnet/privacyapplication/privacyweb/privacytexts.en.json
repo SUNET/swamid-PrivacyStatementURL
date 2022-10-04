@@ -91,7 +91,12 @@
       ]
     },
     {
-      "entityId": [ "https://jira-dev.its.umu.se/shibboleth" ],
+      "entityId": [
+        "https://jira-dev.its.umu.se/shibboleth",
+        "https://jira-next.its.umu.se/shibboleth",
+        "https://jira-stage.its.umu.se/shibboleth",
+        "https://jira.its.umu.se/shibboleth"
+      ],
       "lang": "en",
       "title": "Transfer of personal data to #SYSTEM when using federated login",
       "sections": [

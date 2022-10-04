@@ -29,7 +29,10 @@
     },
     {
       "entityids": [
-        "https://jira-dev.its.umu.se/shibboleth"
+        "https://jira-dev.its.umu.se/shibboleth",
+        "https://jira-next.its.umu.se/shibboleth",
+        "https://jira-stage.its.umu.se/shibboleth",
+        "https://jira.its.umu.se/shibboleth"
       ],
       "lang": "sv",
       "information": {
@@ -81,6 +84,19 @@
         "title": "Online videoplattform",
         "text": [
           "Denna tjänst används för presentationer av video från Umeå universitet"
+        ]
+      }
+    },
+    {
+      "entityids": [
+        "https://www.cambro.umu.se/shibboleth"
+      ],
+      "lang": "sv",
+      "information": {
+        "system": "Cambro (Sakai)",
+        "title": "Lärplattform",
+        "text": [
+          "Umeå universitets gemensamma lärplattform"
         ]
       }
     }

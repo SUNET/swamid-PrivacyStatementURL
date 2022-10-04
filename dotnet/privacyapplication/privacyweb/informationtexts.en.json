@@ -29,7 +29,10 @@
     },
     {
       "entityids": [
-        "https://jira-dev.its.umu.se/shibboleth"
+        "https://jira-dev.its.umu.se/shibboleth",
+        "https://jira-next.its.umu.se/shibboleth",
+        "https://jira-stage.its.umu.se/shibboleth",
+        "https://jira.its.umu.se/shibboleth"
       ],
       "lang": "en",
       "information": {
@@ -83,6 +86,20 @@
           "Service is for presentation of videos from Umea University"
         ]
       }
+    },
+    {
+      "entityids": [
+        "https://www.cambro.umu.se/shibboleth"
+      ],
+      "lang": "en",
+      "information": {
+        "system": "Cambro (Sakai)",
+        "title": "Learning Management System",
+        "text": [
+          "Umea University Learning Management System"
+        ]
+      }
     }
+
   ]
 }
