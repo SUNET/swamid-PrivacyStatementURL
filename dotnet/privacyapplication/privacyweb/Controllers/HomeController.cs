@@ -45,11 +45,12 @@ namespace privacyweb.Controllers
                     if (mdqModel.SystemNames.Count>0)
                     {
                         systemName = (from s in mdqModel.SystemNames.Where(l => l.Lang == _culture) select s.Name).SingleOrDefault();
+                        
                     }
                     else {
                         systemName = query.system; 
                     }
-
+                    systemName = HttpUtility.UrlDecode(systemName);
                     if (sl !=null && sl.Count>0)
                     {
                         if (sl.First().sections == null) {
@@ -86,7 +87,12 @@ namespace privacyweb.Controllers
 
         private void SetAttributes(PrivacyModel pm, MDQModel m,string systemName)
         {
-            pm.privacylist[0].sections[1].subsections[0].attributes.properties.Clear();
+            
+            if (pm.privacylist[0].sections[1].subsections[0].attributes != null)
+            {
+                pm.privacylist[0].sections[1].subsections[0].attributes.properties.Clear();
+            }
+            //pm.privacylist[0].sections[1].subsections[0].attributes = new attribute();
             foreach (var a in m.Attributes)
             {
                 pm.privacylist[0].sections[1].subsections[0].attributes.properties.Add(GetAttribute(a, systemName));
@@ -94,7 +100,7 @@ namespace privacyweb.Controllers
 
             if (m.Attributes.Count == 0)
             {
-                pm.privacylist[0].sections[1].subsections[0].attributes = null;
+                pm.privacylist[0].sections[1].subsections[0].attributes.properties.Clear();
                 //sätt defaulttext i sidan
                 pm.EmptyAttributesText = _culture == "sv" ? _privacySettings.EmptyAttributes_sv : _privacySettings.EmptyAttributes_en;
                 var foo = "";

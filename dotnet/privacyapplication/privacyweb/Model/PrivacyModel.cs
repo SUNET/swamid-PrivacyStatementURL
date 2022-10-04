@@ -59,6 +59,8 @@ namespace privacyweb.Model
         {
             return (subsection)this.MemberwiseClone();
         }
+        [JsonPropertyName("id")]
+        public string id { get; set; }
         [JsonPropertyName("title")]
         public string title { get; set; }
         [JsonPropertyName("text")]

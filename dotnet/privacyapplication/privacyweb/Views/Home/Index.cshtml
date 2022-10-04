@@ -36,6 +36,8 @@
                     }
                     @if (subSection.attributes != null)
                     {
+                        if (subSection.attributes.properties.Count > 0)
+                        {
                         <table>
                             <thead>
                                 <tr>
@@ -57,13 +59,16 @@
                                     </tr>
                                 }
                             </tbody>
-                    </table>
+                        </table>
+                        }
+                        else
+                        //if(subSection.attributes.properties.Count> && subSection.id=="transferpersonaldata")
+                        {
+                            <p><b>@Html.Raw(Model.EmptyAttributesText)</b></p>
+                        }
+                    }
+                    
                 }
-                else
-                {
-                    <p><b>@Html.Raw(Model.EmptyAttributesText)</b></p>
-                }
-            }
             }
         }  
 </div>
