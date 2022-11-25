@@ -99,6 +99,34 @@
           "Umeå universitets gemensamma lärplattform"
         ]
       }
+    },
+    {
+      "entityids": [
+        "https://lis.ladok.se/shibboleth",
+        "https://lis.test.ladok.se/shibboleth"
+      ],
+      "lang": "sv",
+      "information": {
+        "system": "Ladok-LIS",
+        "title": "Administrativt verktyg",
+        "text": [
+          "Administrationsverktyg Ladok-Lis integration"
+        ]
+      }
+    },
+    {
+      "entityids": [
+        "https://se.timeedit.net/umu-student-sp",
+        "https://se.timeedit.net/umu-employee-sp"
+      ],
+      "lang": "sv",
+      "information": {
+        "system": "TimeEdit",
+        "title": "Administrativt verktyg",
+        "text": [
+          "Schemaläggning och lokalbokning för Umeå universitet"
+        ]
+      }
     }
   ]
 }

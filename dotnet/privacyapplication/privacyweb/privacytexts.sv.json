@@ -106,6 +106,35 @@
           "text": [ "Jira används för ärendehantering, felrapportering och agil projektledning vid Umeå Universitet. Den federerade inloggningen hanterar inloggning till instanser av Jira som används av ITS hos Umeå Universitet." ]
         }
       ]
+    },
+    {
+      "entityId": [
+        "http://adfs.test.umu.se/adfs/services/trust"
+      ],
+      "lang": "sv",
+      "title": "Överföring av personuppgifter till #SYSTEM vid användning av federerad inloggning",
+      "sections": [
+        {
+          "id": "description",
+          "title": "Beskrivning av #SYSTEM",
+          "text": [ "Systemet hanterar inloggning av användarkonton vid Umeå universitet" ]
+        }
+      ]
+    },
+    {
+      "entityId": [
+        "https://lis.ladok.se/shibboleth",
+        "https://lis.test.ladok.se/shibboleth"
+      ],
+      "lang": "sv",
+      "title": "Transfer of personal data to #SYSTEM when using federated login",
+      "sections": [
+        {
+          "id": "description",
+          "title": "Beskrivning av #SYSTEM",
+          "text": [ "Administrationsverktyg Ladok-Lis integration" ]
+        }
+      ]
     }
   ]
 }

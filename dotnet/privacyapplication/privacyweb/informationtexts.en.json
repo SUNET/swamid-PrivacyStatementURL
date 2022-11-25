@@ -56,7 +56,7 @@
         "title": "System for administration of exams and tests",
         "text": [
           "TentaAdmin is a system for administration of students, proctors and exam rooms for exams or other tests.",
-          "System owner is UHR, Swedish council for higher education. Development and test environment is handled by ITS, IT-support and system development at Umeå Universitet.",
+          "System owner is UHR, Swedish council for higher education. Development and test environment is handled by ITS, IT-support and system development at Umeï¿½ Universitet.",
           "The service is used by personel at universitys and collages in Sweden."
         ]
       }
@@ -70,7 +70,7 @@
         "system": "WISUM",
         "title": "web-based purchasing system",
         "text": [
-          "Web-based purchasing system för higher education"
+          "Web-based purchasing system fï¿½r higher education"
         ]
       }
     },
@@ -99,7 +99,35 @@
           "Umea University Learning Management System"
         ]
       }
+    },
+    {
+      "entityids": [
+        "https://lis.ladok.se/shibboleth",
+        "https://lis.test.ladok.se/shibboleth"
+      ],
+      "lang": "en",
+      "information": {
+        "system": "Ladok-LIS",
+        "title": "Administrative Tool",
+        "text": 
+        [
+          "Administrative tool for Ladok-Lis integration"
+        ]
+      }
+    },
+    {
+      "entityids": [
+        "https://se.timeedit.net/umu-student-sp",
+        "https://se.timeedit.net/umu-employee-sp"
+      ],
+      "lang": "en",
+      "information": {
+        "system": "TimeEdit",
+        "title": "Administrative tool",
+        "text": [
+          "Scheduling and room booking for UmeÃ¥ University"
+        ]
+      }
     }
-
   ]
 }
